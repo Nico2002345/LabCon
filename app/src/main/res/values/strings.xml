@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Dog Breeds App</string>
+    <string name="select_category">Selecciona una categoría</string>
+
+    <!-- Categorías de razas -->
+    <string-array name="dog_categories">
+        <item>Pastores</item>
+        <item>Terriers</item>
+        <item>Bulldogs</item>
+        <item>Perros de caza</item>
+        <item>Perros pequeños</item>
+        <item>Cazadores</item>
+    </string-array>
+
+    <!-- Razas específicas para cada categoría -->
+
+    <!-- Pastores -->
+    <string-array name="pastores_breeds">
+        <item>Pastor Alemán</item>
+        <item>Pastor Belga</item>
+        <item>Pastor Australiano</item>
+        <item>Pastor de Shetland</item>
+        <item>Pastor Blanco Suizo</item>
+    </string-array>
+
+    <!-- Terriers -->
+    <string-array name="terriers_breeds">
+        <item>Yorkshire Terrier</item>
+        <item>Jack Russell Terrier</item>
+        <item>Bull Terrier</item>
+        <item>West Highland White Terrier</item>
+        <item>Staffordshire Bull Terrier</item>
+    </string-array>
+
+    <!-- Bulldogs -->
+    <string-array name="bulldogs_breeds">
+        <item>Bulldog Inglés</item>
+        <item>Bulldog Francés</item>
+        <item>Bulldog Americano</item>
+        <item>Bulldog Campeiro</item>
+        <item>Bulldog Ca de Bou</item>
+    </string-array>
+
+    <!-- Perros de caza -->
+    <string-array name="perros_de_caza_breeds">
+        <item>Labrador Retriever</item>
+        <item>Golden Retriever</item>
+        <item>Beagle</item>
+        <item>Pointer</item>
+        <item>Braco Alemán</item>
+    </string-array>
+
+    <!-- Perros pequeños -->
+    <string-array name="perros_pequenos_breeds">
+        <item>Chihuahua</item>
+        <item>Pomerania</item>
+        <item>Shih Tzu</item>
+        <item>Caniche Toy</item>
+        <item>Bichón Frisé</item>
+    </string-array>
+
+    <string-array name="cazadores_breeds">
+        <item>Criollo</item>
+    </string-array>
+</resources>
