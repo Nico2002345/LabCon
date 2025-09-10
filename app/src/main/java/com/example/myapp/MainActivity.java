@@ -24,51 +24,45 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         textView = findViewById(R.id.textView);
 
-        // Configurar el Spinner con las categorías de razas
+        // Configurar el Spinner con categorías principales (Sobres, Paquetes, Cajas)
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.dog_categories, android.R.layout.simple_spinner_item);
+                R.array.Envio_Category, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        // Configurar el botón para mostrar las razas específicas
+        // Configurar el botón para mostrar los tipos específicos de la categoría seleccionada
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Obtener la categoría seleccionada
                 String selectedCategory = spinner.getSelectedItem().toString();
 
-                // Mostrar las razas específicas según la categoría seleccionada
+                // Mostrar los tipos de envíos según la categoría seleccionada
                 switch (selectedCategory) {
-                    case "Pastores":
-                        textView.setText(getFormattedBreeds(R.array.pastores_breeds));
+                    case "Cajas":
+                        textView.setText(getFormattedEnvios(R.array.Cajas));
                         break;
-                    case "Terriers":
-                        textView.setText(getFormattedBreeds(R.array.terriers_breeds));
+                    case "Paquetes":
+                        textView.setText(getFormattedEnvios(R.array.Paquetes));
                         break;
-                    case "Bulldogs":
-                        textView.setText(getFormattedBreeds(R.array.bulldogs_breeds));
-                        break;
-                    case "Perros de caza":
-                        textView.setText(getFormattedBreeds(R.array.perros_de_caza_breeds));
-                        break;
-                    case "Perros pequeños":
-                        textView.setText(getFormattedBreeds(R.array.perros_pequenos_breeds));
+                    case "Sobres":
+                        textView.setText(getFormattedEnvios(R.array.Sobres));
                         break;
                     default:
-                        textView.setText("Selecciona una categoría");
+                        textView.setText("Selecciona una categoría válida");
                         break;
                 }
             }
         });
     }
 
-    // Método para formatear las razas como una cadena de texto
-    private String getFormattedBreeds(int breedsArrayId) {
-        String[] breeds = getResources().getStringArray(breedsArrayId);
-        StringBuilder formattedBreeds = new StringBuilder();
-        for (String breed : breeds) {
-            formattedBreeds.append(breed).append("\n");
+    // Método para formatear la lista de tipos de envíos
+    private String getFormattedEnvios(int enviosArrayId) {
+        String[] envios = getResources().getStringArray(enviosArrayId);
+        StringBuilder formattedEnvios = new StringBuilder();
+        for (String envio : envios) {
+            formattedEnvios.append("• ").append(envio).append("\n");
         }
-        return formattedBreeds.toString().trim(); // Eliminar el último salto de línea
+        return formattedEnvios.toString().trim(); // Eliminar el último salto de línea
     }
 }
